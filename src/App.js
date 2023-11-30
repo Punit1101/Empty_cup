@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     // Fetch data from the API
-    fetch('http://localhost:5000') // Assuming data.json contains your listings data
+    fetch('https://emptycupapi.onrender.com/') // Assuming data.json contains your listings data
       .then(response => response.json())
       .then(data => {setListings(data) ;})
       .catch(error => console.error('Error fetching listings:', error));
