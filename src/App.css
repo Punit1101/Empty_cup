@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+body{
+  background-color: rgb(233, 233, 247);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrap{
+  background: #fff;
+  max-width: 540px;
+  width: 100%;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.odd-row{
+background-color: #FFFCF2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.show_none{
+  display: none !important;
 }
 
-.App-link {
-  color: #61dafb;
+/* navbar */
+.nav_icon{
+width: 25px; 
+height: 22px;
+}
+.nav_p{
+font-size: 10px; 
+margin: 0;
+}
+/* navbar */
+
+/* design detail */
+.design_name{
+font-size: 25px; 
+font-weight: 400px; 
+font-family: 'Chivo';
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.design_ele_p{
+font-size: 15px; 
+font-weight: 400px; 
+font-family: 'Chivo';
 }
+
+.design_detail{
+font-size: 25px; 
+font-weight: 400px; 
+font-family: 'Chivo';
+margin: 0;
+}
+
+.design_detail_p{
+font-size: 12px; 
+font-weight: 400px; 
+font-family: 'Chivo';
+}
+
+/* design detail */
+
+/* rating system start */
+.rating{
+  position: relative;
+  display: inline-block;
+}
+
+.rating-inner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.rating::before{
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 200;
+  font-size: 16px;
+  
+}
+
+.rating-inner::before{
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: black;
+  font-size: 16px;
+}
+
+.shortlist_c{
+  font-size: 16px;
+}
+/* img{
+  background-color: #FFC107;
+  box-shadow: inset 0px 1px 0px 0px;
+} */
+
+/* rating system end */

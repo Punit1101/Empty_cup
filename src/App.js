@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import Navbar2 from './components/Navbar2';
+import EmployeeRating from './components/EmployeeRating';
 
 function App() {
+  const [listings, setListings] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from the API
+    fetch('http://localhost:5000') // Assuming data.json contains your listings data
+      .then(response => response.json())
+      .then(data => {setListings(data) ;})
+      .catch(error => console.error('Error fetching listings:', error));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrap mx-auto">
+      <Navbar />
+      <Navbar2 onShortlistAllClick={() => {}} />
+      <EmployeeRating listings={listings} />
     </div>
   );
 }
